@@ -1,0 +1,139 @@
+<!--
+    Öğrenci adı-soyadı: Şevval ÖZDAMAR
+    Öğrenci numarası: 200601044
+    Dersin adı: BIL209-Web Tabanlı Programlamaya Giriş
+-->
+<!doctype html>
+<html>
+    <head>
+        <title>DÖRT İŞLEM</title>
+        <meta charset="utf-8">
+        <style type="text/css">
+
+            body
+            {
+                background-color:gray;
+            }
+
+            p
+            {
+                background-color: wheat;
+                font-size:20px;
+                font-weight:bold;
+                position:absolute;
+                bottom:0;
+            }
+
+            h1
+            {
+                font-size:40px;
+                color:black;
+	            font: Calibri;
+	            text-align:center;
+                font-weight:bold;
+            }
+
+            h3
+            {
+                font-size:30px;
+                color:black;
+	            font: Calibri;
+	            text-align:center;
+                font-weight:bold;
+            }
+
+            #sayi1, #sayi2
+            {
+                font-size:20px;
+                background-color: rgb(117, 158, 185);
+                color:black;
+	            font-family:monospace;
+	            text-align:center;
+                font-weight:bold;
+            }
+            
+            #butonTopla, #butonCikar, #butonCarp, #butonBol
+            {
+	            font: bold 25px Calibri;
+	            color: black;
+	            background-color:rgb(168, 47, 47);
+	            padding-left: 25px;
+                padding-right: 25px;
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <h3>
+             <label for="sayi1"> 1. sayı: </label>
+              <input id="sayi1" type="number"></input>
+        </h3>
+
+        <h3>
+            <label for="sayi2"> 2. sayı: </label>
+             <input id ="sayi2" type="number"></input>
+        </h3>
+
+        <h3>
+            <input id="butonTopla" type="button" value="+">
+            <input id="butonCikar" type="button" value="-">
+            <input id="butonCarp" type="button" value="*">
+            <input id="butonBol" type="button" value="/">
+        </h3>
+                
+        <h1>
+            <div id="sonuc"></div>
+        </h1>
+
+        <p>
+            Öğrenci adı-soyadı: Şevval ÖZDAMAR <br>
+            Öğrenci numarası: 200601044 <br>
+            Dersin adı: BIL209-Web Tabanlı Programlamaya Giriş <br>
+        </p>
+
+        <script>
+         var buton=document.getElementById("butonTopla");
+         buton.onclick=function()
+         {
+            var num1=Number(document.getElementById("sayi1").value);
+            var num2=Number(document.getElementById("sayi2").value);
+            var toplam = num1 + num2;
+            document.getElementById("sonuc").innerHTML="Sonuç: " + toplam;
+         }
+
+
+         var buton=document.getElementById("butonCikar");
+         buton.onclick=function()
+         {
+            var num1=Number(document.getElementById("sayi1").value);
+            var num2=Number(document.getElementById("sayi2").value);
+            var cikarim = num1 - num2;
+            document.getElementById("sonuc").innerHTML="Sonuç: " + cikarim;
+         }
+
+
+         var buton=document.getElementById("butonCarp");
+         buton.onclick=function()
+         {
+            var num1=Number(document.getElementById("sayi1").value);
+            var num2=Number(document.getElementById("sayi2").value);
+            var carpim = num1 * num2;
+            document.getElementById("sonuc").innerHTML="Sonuç: " + carpim;
+            }
+
+
+         var buton=document.getElementById("butonBol");
+         buton.onclick=function()
+         {
+            var num1=Number(document.getElementById("sayi1").value);
+            var num2=Number(document.getElementById("sayi2").value);
+            var bolum = num1 / num2;
+            document.getElementById("sonuc").innerHTML="Sonuç: " + bolum;
+         }
+        </script>
+    </body>
+</html>    
